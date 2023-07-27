@@ -10,7 +10,12 @@ int n = Convert.ToInt32(Console.ReadLine());
 
 string PrintNumbers(int start, int end)
 {
-    if (start == end) return start.ToString();
+    if (start == end | n == 0) return start.ToString();
     return start + ", " + PrintNumbers(start -1, end);
+}
+if (n < 0)
+{
+    Console.Write("Error!");
+    return;
 }
 Console.WriteLine($"Числа от {n} до 1 -> {PrintNumbers(n, 1)}");
